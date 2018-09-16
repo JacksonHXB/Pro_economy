@@ -8,7 +8,8 @@ from . import viewManager
 # 测试
 @viewManager.route('/test')
 def test():
-    return "测试"
+    print("特特特")
+    return render_template("test.html")
 
 
 
