@@ -8,7 +8,7 @@ BEANS_UPLOAD_ONE_BOOK = 0.5     # 上传一本书，系统怎送鱼豆的数量
 
 RECENT_BOOK_COUNT = 30          # 显示最近上传的图书数量
 
-URL = "http://localhost:8001/test"     # 系统默认打开页面
+URL = "http://localhost:8001/"     # 系统默认打开页面
 
 
 

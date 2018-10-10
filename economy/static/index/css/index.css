@@ -1,0 +1,75 @@
+.header{
+	width:100%;
+	height:45px;
+	background:red;
+}
+.leftNav{
+	width:4%;
+	height:640px;
+	position:relative;
+	float:left;
+	border:1px solid black;
+}
+.main{
+	width:90%;
+	height:640px;
+	position:relative;
+	float:left;
+	border:1px solid black;
+}
+.rightNav{
+	width:4%;
+	height:640px;
+	position:relative;
+	float:left;
+	border:1px solid black;
+}
+.footer{
+	clear:both;
+	width:100%;
+	height:60px;
+	border:1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

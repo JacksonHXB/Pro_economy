@@ -5,11 +5,15 @@ from flask import jsonify, request, render_template,flash
 from . import viewManager
 
 
-# 测试
-@viewManager.route('/test')
-def test():
-    print("特特特")
-    return render_template("test.html")
+# 主页
+@viewManager.route('/')
+def index():
+    return render_template("index.html")
+
+# 跳转后台
+@viewManager.route('/toBackIndex')
+def toBackIndex():
+    return render_template("back_index.html")
 
 
 

@@ -2,9 +2,65 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>主页</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='sys/css/sys.css')}}"/>
+{% block outRefer %}{% endblock %}
 </head>
 <body>
-	<h1>这是一个测试</h1>
+	{% block view_header %}{% endblock %}
+	{% block view_leftNav %}{% endblock %}
+	{% block view_main %}{% endblock %}
+	{% block view_rightNav %}{% endblock %}
+	{% block view_footer %}{% endblock %}
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
