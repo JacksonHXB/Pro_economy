@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//economy/static/index/css/index.css=UTF-8
-encoding//economy/templates/back_index.html=UTF-8
+encoding//economy/templates/back/back_index.html=UTF-8
+encoding//economy/templates/back/info/info_index.html=UTF-8
 encoding//economy/templates/index.html=UTF-8
 encoding/<project>=UTF-8

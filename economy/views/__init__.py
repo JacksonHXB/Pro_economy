@@ -8,7 +8,7 @@ viewManager = Blueprint('viewManager', __name__)
 # web = Blueprint('web', __name__, template_folder='templates')# 这里的蓝图也可以注册静态文件static_folder='', static_url_path=''
 
 # 分别导入蓝图管理的所有视图函数文件
-from economy.views import test
+from economy.views import url
 
 
 

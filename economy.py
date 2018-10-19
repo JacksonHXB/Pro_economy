@@ -34,7 +34,8 @@ def open_browser():
         
 
 if __name__ == '__main__':
-    threading.Thread(target=open_browser).start()
+    # 启动打开浏览器线程
+    # threading.Thread(target=open_browser).start()
     economy.run(host=economy.config['HOST'], port=economy.config['PORT'], debug=economy.config['DEBUG'], threaded=True)
     
 

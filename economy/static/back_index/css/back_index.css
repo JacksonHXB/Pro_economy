@@ -1,0 +1,67 @@
+.header{
+	width:100%;
+	height:45px;
+	background:red;
+}
+.leftNav{
+	width:10%;
+	height:500px;
+	position:relative;
+	float:left;
+}
+.main{
+	width:90%;
+	height:500px;
+	position:relative;
+	float:left;
+	overflow:hidden;
+}
+.footer{
+	clear:both;
+	width:100%;
+	height:60px;
+	border:1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

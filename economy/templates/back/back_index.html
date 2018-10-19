@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+
+{% block outRefer %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='back_index/css/back_index.css')}}"/>
+<!-- 导入bootstrap的css样式 -->
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='sys/bootstrap/css/bootstrap.min.css')}}"/>
+<!-- 导入jquery的js -->
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/jquery-2.0.0.min.js')}}"></script>
+<!-- 导入bootstrap的js -->
+<script type="text/javascript" src="{{url_for('static', filename='sys/bootstrap/js/bootstrap.min.js')}}"></script>
+<!-- 导入本地js -->
+<script type="text/javascript">
+	//页面初始化
+	$(function(){
+		$("#info").bind("click", function(){//点击资讯系统
+			$("#main").attr({"src":"{{url_for('viewManager.toBackInfo')}}"})
+		});
+	})
+</script>
+{% endblock %}
+
+
+<div class="container">
+
+<!-- 头部 -->
+{% block view_header %}
+<a>回到首页</a>
+{% endblock %}
+
+
+<!-- 左边工具栏 -->
+{% block view_leftNav %}
+<button onclick="toBackInfo">点击</button>
+<div class="leftNav">
+	<ul class="list-group">
+		<li class="list-group-item" id="info" onclick="toBackInfo">资讯系统</li>
+		<li class="list-group-item">Dapibus ac facilisis in</li>
+		<li class="list-group-item">Morbi leo risus</li>
+		<li class="list-group-item">Porta ac consectetur ac</li>
+		<li class="list-group-item">Vestibulum at eros</li>
+	</ul>
+</div>
+{% endblock %}
+
+
+<!-- 主内容 -->
+{% block view_main %}
+<div class="main">
+	<iframe id="main" name="main" src="#" width="100%" height="800">
+		<a>资讯系统</a>
+	</iframe>
+</div>
+{% endblock %}
+
+
+<!-- 底部 -->
+{% block view_footer %}
+
+{% endblock %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
