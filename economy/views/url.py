@@ -3,7 +3,7 @@
 #===============================================================================
 from flask import jsonify, request, render_template,flash
 from . import viewManager
-
+from ..xiaoBing.voice import Speech
 
 # 主页
 @viewManager.route('/')
@@ -20,6 +20,10 @@ def toBackIndex():
 def toBackInfo():
     return render_template("back/info/info_index.html")
 
+# 跳转后台登录
+@viewManager.route('/toBackLogin')
+def toBackLogin():
+    return render_template("back/back_login.html")
 
 
 

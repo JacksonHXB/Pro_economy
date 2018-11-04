@@ -16,7 +16,10 @@ def toBackIndex():
     return render_template("back/back_index.html")
 
 
-
+# 跳转后台登录
+@viewManager.route('/toBackLogin')
+def toBackLogin():
+    return render_template("back/back_login.html")
 
 
 
