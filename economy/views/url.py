@@ -3,7 +3,6 @@
 #===============================================================================
 from flask import jsonify, request, render_template,flash
 from . import viewManager
-from ..xiaoBing.voice import Speech
 
 # 主页
 @viewManager.route('/')

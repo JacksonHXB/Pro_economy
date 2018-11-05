@@ -9,13 +9,15 @@
 <!-- 头部 -->
 {% block view_header %}
 <div class="header">
-	<div class="logo" >
-		<img src="{{url_for('static',filename='front/index/img/_logo_.png')}}"/>	
+	<div class="logo">
+		<img src="{{url_for('static',filename='front/index/img/logo.png')}}"/>	
 	</div>
-	<a>待处理事务</a>
-	<a>登陆 | 注册</a>
-	<a>账户</a>
-	<a href="{{url_for('viewManager.toBackLogin')}}">后台管理</a>
+	<div class="headerRight">
+		<a>待处理事务</a>
+		<a>登陆 | 注册</a>
+		<a>账户</a>
+		<a href="{{url_for('viewManager.toBackLogin')}}">后台管理</a>
+	</div>
 </div>
 {% endblock %}
 

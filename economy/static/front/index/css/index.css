@@ -1,8 +1,13 @@
 .header{
 	width:100%;
 	height:45px;
-	background:red;
+	background:white;
 	border:1px soild black;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	background:red;
 }
 .leftNav{
 	width:4%;
@@ -33,8 +38,8 @@
 }
 /********** 头部 **************************/
 .logo{
-	width:350px;
-	height:215px;
+	width:250px;
+	height:45px;
 }
 .logo img{
 	width:100%;
