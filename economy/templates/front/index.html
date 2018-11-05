@@ -9,6 +9,12 @@
 <!-- 头部 -->
 {% block view_header %}
 <div class="header">
+	<div class="logo" >
+		<img src="{{url_for('static',filename='front/index/img/_logo_.png')}}"/>	
+	</div>
+	<a>待处理事务</a>
+	<a>登陆 | 注册</a>
+	<a>账户</a>
 	<a href="{{url_for('viewManager.toBackLogin')}}">后台管理</a>
 </div>
 {% endblock %}
@@ -25,7 +31,19 @@
 <!-- 主内容 -->
 {% block view_main %}
 <div class="main">
-	
+	<!-- 热点新闻 -->
+	<div class="newsTip">
+		<h3>热点新闻</h3>
+		<button>关闭</button>
+		<ul>
+			<li><a>今天是星期一</a></li>
+			<li><a>今天是星期二</a></li>
+			<li><a>今天是星期三</a></li>
+			<li><a>今天是星期四</a></li>
+			<li><a>今天是星期五</a></li>
+			<li><a>今天是星期六</a></li>
+		</ul>
+	</div>
 </div>
 {% endblock %}
 
@@ -41,7 +59,7 @@
 <!-- 底部 -->
 {% block view_footer %}
 <div class="footer">
-	
+	<a>日期和时间</a>
 </div>
 {% endblock %}
 
