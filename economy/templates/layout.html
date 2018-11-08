@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <title>主页</title>
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='sys/css/sys.css')}}"/>
+<!-- 引入jquery -->
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/jquery-2.0.0.min.js')}}"></script>
+<!-- 引入layout.js -->
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/layout.js')}}"></script>
 {% block outRefer %}{% endblock %}
 </head>
 <body>
 	{% block view_header %}{% endblock %}
-	{% block view_leftNav %}{% endblock %}
 	{% block view_main %}{% endblock %}
-	{% block view_rightNav %}{% endblock %}
 	{% block view_footer %}{% endblock %}
 </body>
 </html>
