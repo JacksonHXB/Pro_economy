@@ -3,19 +3,40 @@
 #===============================================================================
 from flask import Flask
 from economy.views import viewManager 
+from flask_pymongo import PyMongo
+import pymongo
+
+# client = pymongo.MongoClient('192.168.1.120',27017)
+# mydb = client["db_finance"]
+# print(mydb)
+# mycol = mydb["tb_gdp"]
+# x= mycol.find_one()
+# print(x)
+
+
+# 初始化PyMongo
+mongodb = PyMongo()
+
 # 初始化系统
 def initSystem():
+    global mongodb
+    
     # 初始化Flask对象
     sys = Flask(__name__)
     # 注册配置文件
     sys.config.from_object('economy.secure')    
-    sys.config.from_object('economy.setting')    
+    sys.config.from_object('economy.setting') 
+    
     # 注册蓝图管理路由系统
-    sys.register_blueprint(viewManager)
+    sys.register_blueprint(viewManager) 
+    
+    # 注册MongoDB
+    sys.config["MONGO_URI"] = 'mongodb://192.168.1.120:27017/db_finance'
+    
+    mongodb.init_app(sys)
+    
     # 使用进程打开窗口，向用户展示
     return sys
-    
-
 
 
 

@@ -10,6 +10,8 @@
 
 <!-- 头部 -->
 {% block view_header %}
+<!-- 智能小冰 -->
+<audio class="xiaoBing" id="xiaoBing" autoplay src="{{data.xiaoBing}}" preload="auto"></audio>
 <div class="view_header">
 	<div class="logo">
 		<img src="{{url_for('static',filename='front/index/img/logo.png')}}"/>	
@@ -33,12 +35,13 @@
 	<!-- 左边工具栏 -->
 	<div class="view_leftNav">
 		<ul>
-			<li><a href="#">宏观经济数据</a></li>
+			<li><div class="macroData" id="macroData">宏观经济数据</div></li>
 		</ul>
 	</div>
 	<div class="view_content">
+		<iframe id="iframe" src="" width="100%" height="100%" style="background:red;"></iframe>
 		<!-- 热点新闻 -->
-		<div class="newsTip">
+		<div class="newsTip" hidden>
 			<h3>热点新闻</h3>
 			<button>关闭</button>
 			<ul>

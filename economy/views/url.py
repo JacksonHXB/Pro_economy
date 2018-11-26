@@ -3,11 +3,41 @@
 #===============================================================================
 from flask import jsonify, request, render_template,flash
 from . import viewManager
+import json
+from economy.xiaoBing.voice import Speech
+
+
+speech = Speech()
+def speak(str):
+    xiaoBing = speech.syntheticSpeech(str) 
+    return xiaoBing
+
 
 # 主页
 @viewManager.route('/')
 def index():
-    return render_template("front/index.html")
+    xiaoBing = speech.syntheticSpeech("主人，你终于来到经济系统了！这里有有关经济的一切，您有什么需要尽管跟我说。") 
+    data = {"xiaoBing":xiaoBing}
+    return render_template("front/index.html", data=data)
+
+# 宏观经济数据
+@viewManager.route("/macroData")
+def toMacroData():
+    xiaoBing = speech.syntheticSpeech("宏观经济数据正在加载中.....")
+    data = {"xiaoBing":xiaoBing}
+    return render_template("front/macroData.html", data=data)
+
+
+@viewManager.route("/toXiaoBing", methods=['POST'])
+def toXiaoBing():
+    if request.method == 'POST':
+        data = json.loads(request.get_data().decode("UTF-8"))
+        res = None
+        if data["flag"] == "macroData":
+            xiaoBing =speak("今年国家的数据比较良好，目前市场趋于稳定，建议购买一点国债！")
+            res = {"data": xiaoBing}
+    return json.dumps(res)
+
 
 # 跳转后台
 @viewManager.route('/toBackIndex')
