@@ -1,0 +1,145 @@
+[33mcommit d47119a0bff1176bfa04c30215a199bf1f3bfbb4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: JacksonDemo <15196608376@163.com>
+Date:   Mon Nov 26 23:35:39 2018 +0800
+
+    智能小冰和flask_mongo的实现
+
+[33mcommit ac13ce55b49e40481e6ab6e9847f994a0f9fb0ce[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: jacksondemo <15196608376@163.com>
+Date:   Thu Nov 15 13:48:34 2018 +0800
+
+    导入echarts.min.js文件
+
+[33mcommit c3e024133d3773f85c2164378443ce436cd26e9f[m
+Author: jacksondemo <15196608376@163.com>
+Date:   Fri Nov 9 12:03:43 2018 +0800
+
+    测试
+
+[33mcommit 888cb7fb77694f6571eeed1d5fdd27271d1daa62[m
+Author: DemoJackson_qq <1612179249@qq.com>
+Date:   Thu Nov 8 15:32:19 2018 +0800
+
+    删除Eclipse的Git测试文件
+
+[33mcommit f2d2ff503cb65246312c9c020a214f7fbadc8c1e[m
+Author: DemoJackson_qq <1612179249@qq.com>
+Date:   Thu Nov 8 15:31:00 2018 +0800
+
+    eclipse测试文件
+
+[33mcommit e6650234b56e365814dabb53de8d1493734bddd9[m
+Author: DemoJackson_qq <1612179249@qq.com>
+Date:   Thu Nov 8 15:24:19 2018 +0800
+
+    删除测试文件
+
+[33mcommit 4d673fb53b7f7b299c5ffe930998600046548a2a[m
+Merge: 3daaf5c 7348a85
+Author: DemoJackson_qq <1612179249@qq.com>
+Date:   Thu Nov 8 15:20:08 2018 +0800
+
+    Merge branch 'merge_branch'
+
+[33mcommit 7348a8570d54f06cdbe98d56c86aa5747d6cecf4[m
+Author: DemoJackson_qq <1612179249@qq.com>
+Date:   Thu Nov 8 14:51:25 2018 +0800
+
+    测试16121
+
+[33mcommit 3daaf5c4284a84664d1ffcaedfd61311797d71e6[m
+Author: jacksondemo <15196608376@163.com>
+Date:   Thu Nov 8 13:51:10 2018 +0800
+
+    宏观经济数据按钮
+
+[33mcommit 1399130e1021cd0580df0ec0174830f23452ba15[m
+Author: jacksondemo <15196608376@163.com>
+Date:   Wed Nov 7 17:06:44 2018 +0800
+
+    文本测试
+
+[33mcommit f317046b3d81ffa194ee92e3d2746813d4597955[m
+Author: 1612179249@qq.com <1612179249@qq.com>
+Date:   Mon Nov 5 18:08:15 2018 +0800
+
+    主页Logo实现
+
+[33mcommit fbe5e5db19fadb4ca961797f3c3af15acd2bfdea[m
+Author: 1612179249@qq.com <1612179249@qq.com>
+Date:   Mon Nov 5 15:21:11 2018 +0800
+
+    logo制作
+
+[33mcommit 1b2be3ed389b79fbf415fc1fb9d8b7ca58cddc99[m
+Author: 1612179249@qq.com <1612179249@qq.com>
+Date:   Mon Nov 5 13:19:12 2018 +0800
+
+    目录结构重构
+
+[33mcommit 569ca068fe74de8eb9e82621f980a545ef8a0567[m
+Author: 1612179249@qq.com <1612179249@qq.com>
+Date:   Mon Nov 5 13:00:36 2018 +0800
+
+    返回测试前的状态
+
+[33mcommit 7375df7d0812755541c2e4279947d04adcf6b81e[m
+Author: 1612179249@qq.com <1612179249@qq.com>
+Date:   Mon Nov 5 12:59:56 2018 +0800
+
+    测试4
+
+[33mcommit d33a689f66e483157b79c7e3f6693a7028c57b1d[m
+Author: Administrator <Administrator@8BAVKPUL1YWWSOJ>
+Date:   Sun Nov 4 21:46:40 2018 +0800
+
+    后台登录面板
+
+[33mcommit 6409d4eba3f9179735ff7c0851b07bc727fdab96[m
+Author: Administrator <Administrator@8BAVKPUL1YWWSOJ>
+Date:   Fri Oct 19 22:55:21 2018 +0800
+
+    资讯系统页面
+
+[33mcommit 17d0cef477c66e9524210624aa53fff05c151bce[m
+Author: Administrator <Administrator@8BAVKPUL1YWWSOJ>
+Date:   Wed Oct 10 17:08:47 2018 +0800
+
+    主页框架搭建
+
+[33mcommit f02e1909704e935d1b4c95d3fc417eb9dc2216ea[m
+Author: Administrator <Administrator@UA6FVDEIJD4AR4U>
+Date:   Sun Sep 16 17:19:21 2018 +0800
+
+    模板文件夹创建
+
+[33mcommit 5e3ecb8fbbaede3a8c44a9e0d38ed039904762f0[m
+Author: Administrator <Administrator@UA6FVDEIJD4AR4U>
+Date:   Sun Sep 16 17:04:43 2018 +0800
+
+    test
+
+[33mcommit 20f4b834f679c39924b97f4b39edb9f744a5ce61[m
+Merge: 1182431 3cddfb5
+Author: Administrator <Administrator@UA6FVDEIJD4AR4U>
+Date:   Sun Sep 16 16:53:55 2018 +0800
+
+    Merge remote-tracking branch 'origin/initSystem' into initSystem
+
+[33mcommit 1182431f1347ca11a0e6ff5c5cfc7872634512aa[m
+Author: Administrator <Administrator@UA6FVDEIJD4AR4U>
+Date:   Sun Sep 16 16:43:41 2018 +0800
+
+    系统架构完成
+
+[33mcommit 3cddfb53e3dd96ffc73afd5099773734237158c5[m
+Author: Administrator <Administrator@UA6FVDEIJD4AR4U>
+Date:   Sun Sep 16 16:43:41 2018 +0800
+
+    系统初始化完成
+
+[33mcommit 86bbc91a8aa0a86e40fcd0a9d1c2db713ba5e72d[m
+Author: Administrator <Administrator@VAV3Z7EUM7XFZUA>
+Date:   Thu Sep 13 17:34:09 2018 +0800
+
+    初始化项目
