@@ -4,15 +4,6 @@
 from flask import Flask
 from economy.views import viewManager 
 from flask_pymongo import PyMongo
-import pymongo
-
-# client = pymongo.MongoClient('192.168.1.120',27017)
-# mydb = client["db_finance"]
-# print(mydb)
-# mycol = mydb["tb_gdp"]
-# x= mycol.find_one()
-# print(x)
-
 
 # 初始化PyMongo
 mongodb = PyMongo()
