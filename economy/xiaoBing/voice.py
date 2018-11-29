@@ -82,19 +82,22 @@ class Speech(object):
             f = urlopen(req, timeout=5)
             result_str = f.read()
         except URLError as err:
-            print('请求失败！' + str(err.code))
-            result_str = err.read()
-        result_str = result_str.decode()
-        
-        result = json.loads(result_str)
-        # 对请求的结果进行处理如果正确则返回access_token
-        if ('access_token' in result.keys() and 'scope' in result.keys()):
-            if not SCOPE in result['scope'].split(' '):
-                raise DemoError('scope is not correct')
-            # print('成功返回token: %s ; 在这世间之后将会失效: %s' % (result['access_token'], result['expires_in']))
-            return result['access_token']
-        else:
-            raise DemoError("或许 API_KEY 或者 SECRET_KEY 不正确，也可能是在获取token的返回值中没有找到 access_token 或者 scope")
+            print('请求失败！')
+#             print('请求失败！' + str(err.code))
+#             result_str = err.read()
+            result_str = ""
+        if result_str != "":
+            result_str = result_str.decode()
+            
+            result = json.loads(result_str)
+            # 对请求的结果进行处理如果正确则返回access_token
+            if ('access_token' in result.keys() and 'scope' in result.keys()):
+                if not SCOPE in result['scope'].split(' '):
+                    raise DemoError('scope is not correct')
+                # print('成功返回token: %s ; 在这世间之后将会失效: %s' % (result['access_token'], result['expires_in']))
+                return result['access_token']
+            else:
+                raise DemoError("或许 API_KEY 或者 SECRET_KEY 不正确，也可能是在获取token的返回值中没有找到 access_token 或者 scope")
 
 
 #------------------------------------------------------------------------------ 

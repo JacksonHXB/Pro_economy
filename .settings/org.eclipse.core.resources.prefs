@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
 encoding//economy/static/front/index/css/index.css=UTF-8
+encoding//economy/static/front/macroData/index/css/macroData.css=UTF-8
 encoding//economy/templates/back/index.html=UTF-8
 encoding//economy/templates/back/login.html=UTF-8
 encoding//economy/templates/front/index.html=UTF-8
-encoding//economy/templates/front/macroData.html=UTF-8
+encoding//economy/templates/front/macroData/gdp.html=UTF-8
+encoding//economy/templates/front/macroData/macroData.html=UTF-8
 encoding/<project>=UTF-8

@@ -1,18 +1,15 @@
 {% extends 'layout.html' %}
 
 {% block outRefer %}
-<!-- 引入当前页面的css -->
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='front/index/css/index.css')}}"/>
-<!-- 导入当前页的js -->
 <script type="text/javascript" src="{{url_for('static', filename='front/index/js/index.js')}}"></script>
 {% endblock %}
 
 
 <!-- 头部 -->
 {% block view_header %}
-<!-- 智能小冰 -->
-<audio class="xiaoBing" id="xiaoBing" autoplay src="{{data.xiaoBing}}" preload="auto"></audio>
 <div class="view_header">
+	<audio class="xiaoBing" id="xiaoBing" autoplay src="{{data.xiaoBing}}" preload="auto"></audio>
 	<div class="logo">
 		<img src="{{url_for('static',filename='front/index/img/logo.png')}}"/>	
 	</div>
@@ -35,11 +32,33 @@
 	<!-- 左边工具栏 -->
 	<div class="view_leftNav">
 		<ul>
-			<li><div class="macroData" id="macroData">宏观经济数据</div></li>
+			<li class="li">
+				<div class="imgWrapper macroData" id="macroData">
+					<img class="img" src="{{url_for('static', filename='front/index/img/macroData.png')}}" alt="宏观经济"/>
+				</div>	
+			</li>
+			<li class="li">
+				<div class="imgWrapper macroData" id="macroData">
+					<img class="img" src="{{url_for('static', filename='front/index/img/macroData.png')}}" alt="宏观经济"/>
+				</div>	
+			</li>
+			<li class="li">
+				<div class="imgWrapper macroData" id="macroData">
+					<img class="img" src="{{url_for('static', filename='front/index/img/macroData.png')}}" alt="宏观经济"/>
+				</div>	
+			</li>
 		</ul>
 	</div>
 	<div class="view_content">
-		<iframe id="iframe" src="" width="100%" height="100%"></iframe>
+		<iframe 
+			class="iframe" 
+			id="iframe" 
+			src="{{url_for('viewManager.toMacroData')}}" 
+			width="100%" 
+			height="100%"
+			frameborder="0"
+			scrolling="auto">
+		</iframe>
 		<!-- 热点新闻 -->
 		<div class="newsTip" hidden>
 			<h3>热点新闻</h3>
