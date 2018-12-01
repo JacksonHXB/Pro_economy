@@ -24,7 +24,15 @@ $(function () {
         console.log("增加菜单")
         //向后台传递数据，再iframe里面返回页面
         $(".frame").attr({"src":"../addMenu/addMenu.html"})
-    })
+    })      
+    /*点击资讯系统*/
+	$("#info").click(function(){
+		console.log("已经点击了资讯系统")
+	})
+		/*点击热点资讯*/
+	    $(".hotNews").click(function () {
+	        $("#iframe").attr({"src":"http://localhost:8001/back/info/hotNews"})
+	    })
 });
 
 

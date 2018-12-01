@@ -1,24 +1,22 @@
 <html>
 <head>
     <title>后台系统</title>
-    <!-- 引入当前页的css -->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='back/index/css/index.css')}}"/>
-    <!-- 引入jquery -->
     <script type="text/javascript" src="{{url_for('static', filename='sys/js/jquery-2.0.0.min.js')}}"></script>
-	<!-- 导入当前页的js -->
     <script type="text/javascript" src="{{url_for('static', filename='back/index/js/index.js')}}"></script>
 </head>
 <body>
-    <div class="container">
+	<div class="container">
         <div class="containerTop">
-
+			<a href="{{url_for('viewManager.index')}}">返回前台</a>
         </div>
         
         <div class="containerLeft">
             <ul>
                 <li class="li_1"><div class="imgCls"><img src="{{url_for('static', filename='back/index/img/data.png')}}"/></div></li>
-                <li class="li_2"><div class="imgCls"><img src="{{url_for('static', filename='back/index/img/reposity.png')}}"/></div></li>
+                <li class="li_2" id="info"><div class="imgCls"><img src="{{url_for('static', filename='back/index/img/info.png')}}"/></div></li>
                 <li class="li_3"><div class="imgCls"><img src="{{url_for('static', filename='back/index/img/setting.png')}}"/></div></li>
+                <li class="li_4"><div class="imgCls"><img src="{{url_for('static', filename='back/index/img/reposity.png')}}"/></div></li>
             </ul>
         </div>
         
@@ -26,12 +24,18 @@
             <div class="firstMenu">
                 <ul>
                     <li class="addMenu">添加菜单</li>
+                    <li class="hotNews">热点资讯</li>
                 </ul>
             </div>
-            <iframe class="frame">
-
-
-            </iframe>
+			<iframe 
+				class="iframe" 
+				id="iframe" 
+				src="" 
+				width="100%" 
+				height="100%"
+				frameborder="0"
+				scrolling="auto">
+			</iframe>
         </div>
     </div>
 </body>

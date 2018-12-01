@@ -2,17 +2,19 @@ $(function(){
 	/*显示左侧菜单栏*/
 	$(".view_main").mousemove(function(e){
 		if(e.clientX<10){//当鼠标在距屏幕左50px内
+			console.log(e)
 			$(".view_leftNav").css({"display":"block"})
 			$(".view_content").css({"width":"92%"})
 		}
 	})
 	
-	/*隐藏左侧菜单栏*/
+	/*隐藏左侧菜单栏
 	$(".view_leftNav").mouseout(function(){
 		$(".view_leftNav").css({"display":"none"})
 	})
+	 * */
 	
-	//点击宏观经济数据按钮
+	/*点击宏观经济数据按钮*/
 	$("#macroData").click(function(){
 		$("#iframe").attr({"src":"http://localhost:8001/macroData"})
         new Promise(function(mySuccess,myFail){
@@ -31,7 +33,7 @@ $(function(){
 	        $(".xiaoBing").attr({"src":res})
 	        document.getElementById("xiaoBing").play()
         })
-	})		
+	})	
 })
 
 

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block outRefer %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='front/info/index/css/index.css')}}"/>
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/jquery-2.0.0.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/echarts.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='front/info/index/js/index.js')}}"></script>
+{% endblock %}
+
+{% block view_main %}
+
+
+<ul class="menu">
+	<li class="li"><a href="{{url_for('viewManager.toHotNews')}}">测试</a></li>
+	<li class="li">测试</li>
+	<li class="li">测试</li>
+	<li class="li">测试</li>
+	<li class="li">测试</li>
+</ul>	
+
+
+
+
+{% endblock %}
+

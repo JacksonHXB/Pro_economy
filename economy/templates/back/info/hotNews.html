@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='back/info/hotNews/css/hotNews.css')}}"/>
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/jquery-2.0.0.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='back/info/hotNews/js/hotNews.js')}}"></script>
+</head>
+<body>
+	<select class="targetWeb">
+		<option selected value="sina">Sina</option>
+		<option value="fengHuang">凤凰</option>
+	</select>
+	<select class="targetType">
+		<option>点击总排行</option>
+		<option>评论总排行</option>
+	</select>
+	
+	<button class="search">搜索</button>
+	
+	
+	<table class="table" id="table">
+		<tr>
+			<th></th>
+		</tr>
+		<!-- 
+		{% for item in res%}
+		<tr>
+			<td>{{item.title}}</td>
+			<td>{{item._id}}</td>
+		</tr>
+		{% endfor %}
+		 -->
+	</table>
+</body>
+</html>

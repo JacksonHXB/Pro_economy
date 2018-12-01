@@ -12,12 +12,15 @@ from economy.views import url
 
 
 # 导入macroData的路由
+from economy.views.front import frontUrl
 from economy.views.front.macroData import macroData
+from economy.views.front.info import info
 
 
 
-
-
+#----- 后台URL管理 ------------------------------------------------------------------------- 
+from economy.views.back import backUrl
+from economy.views.back.info import info
 
 
 

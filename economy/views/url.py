@@ -5,6 +5,7 @@ from flask import jsonify, request, render_template,flash
 from . import viewManager
 import json
 from economy.xiaoBing.voice import Speech
+from economy.service.front.hotNews import Service
 
 
 speech = Speech()
@@ -17,19 +18,23 @@ def speak(str):
 @viewManager.route('/')
 def index():
 #     xiaoBing = speech.syntheticSpeech("主人，你终于来到经济系统了！这里有有关经济的一切，您有什么需要尽管跟我说。") 
-    xiaoBing = None
-    data = {"xiaoBing":xiaoBing}
-    return render_template("front/index.html", data=data)
 
-# 宏观经济数据
-@viewManager.route("/macroData")
-def toMacroData():
-#     xiaoBing = speech.syntheticSpeech("宏观经济数据正在加载中.....")
-#     data = {"xiaoBing":xiaoBing}
+    # 获取最近的热点新闻
+    topNews = Service.queryHotNews()
+        
     data = {}
-    return render_template("front/macroData/macroData.html", data=data)
+    data["topNews"] = topNews
+    return render_template("front/index.html",data=data)
 
 
+
+
+
+
+
+
+
+# 语音小冰
 @viewManager.route("/toXiaoBing", methods=['POST'])
 def toXiaoBing():
     if request.method == 'POST':
@@ -41,21 +46,6 @@ def toXiaoBing():
 #             res = {"data": xiaoBing}
     return json.dumps(res)
 
-
-# 跳转后台
-@viewManager.route('/toBackIndex')
-def toBackIndex():
-    return render_template("back/index.html")
-
-# 跳转资讯系统
-@viewManager.route('/toBackInfo')
-def toBackInfo():
-    return render_template("back/info/info_index.html")
-
-# 跳转后台登录
-@viewManager.route('/toBackLogin')
-def toBackLogin():
-    return render_template("back/login.html")
 
 
 
