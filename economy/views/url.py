@@ -21,7 +21,6 @@ def index():
 
     # 获取最近的热点新闻
     topNews = Service.queryHotNews()
-        
     data = {}
     data["topNews"] = topNews
     return render_template("front/index.html",data=data)

@@ -61,11 +61,13 @@
 		</iframe>
 		<!-- 热点新闻 -->
 		<div class="newsTip">
-			<h3>热点新闻</h3>
-			<button>关闭</button>
+			<div class="newHead">
+				<h3 class="newsTipTitle">热点新闻</h3>
+				<div class="closeIcon">关闭</div>
+			</div>
 			<ul>
 				{% for item in data.topNews%}
-					<li><a href="{{item.href}}">{{item.title}}</a></li>
+					<li><div class="btn" attr-href="{{item.href}}">{{item.title | truncate(15) }}</div></li>
 				{% endfor %}
 			</ul>
 		</div>

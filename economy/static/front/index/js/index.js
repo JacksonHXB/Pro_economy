@@ -34,9 +34,18 @@ $(function(){
 	        document.getElementById("xiaoBing").play()
         })
 	})	
+	
+	/*点击新闻*/
+	$(".btn").click(function(){
+		let href = $(this).attr("attr-href")//取出自定义的属性
+		window.open(href, '_blank',"top=100,left=100,height=600,width=1000,menubar=no,toolbar=no,status=no,scrollbars=yes")
+	})
+	
+	/*点击关闭按钮*/
+	$(".closeIcon").click(function(){
+		$(".newsTip").css({"display":"none"})
+	})
 })
-
-
 
 
 
