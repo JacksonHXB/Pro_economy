@@ -4,6 +4,8 @@
 from flask import jsonify, request, render_template,flash
 from economy.views import viewManager
 import json
+from bson import json_util
+from economy.service.front.newsService import NewsService
 
 # 宏观经济数据
 @viewManager.route("/macroData")
@@ -29,6 +31,20 @@ def toBackIndex():
 def toBackLogin():
     return render_template("back/login.html")
 
+
+@viewManager.route('/index/news/topNews')
+def getTopNews():
+    # 获取最近的热点新闻
+    topNews = NewsService.queryHotNews()
+    return json_util.dumps(topNews)
+
+
+@viewManager.route('/index/news/latest', methods=["GET"])
+def getLatestNew():
+    
+    
+    
+    return json_util.dumps("")
 
 
 

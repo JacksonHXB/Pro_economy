@@ -24,8 +24,6 @@
 
 
 
-
-
 <!-- 主内容 -->
 {% block view_main %}
 <div class="view_main">
@@ -59,18 +57,19 @@
 			frameborder="0"
 			scrolling="auto">
 		</iframe>
+		
 		<!-- 热点新闻 -->
 		<div class="newsTip">
 			<div class="newHead">
 				<h3 class="newsTipTitle">热点新闻</h3>
-				<div class="closeIcon">关闭</div>
+				<div class="closeIcon">
+					<img class="img" src="{{url_for('static', filename='front/index/img/cancel.png')}}" alt="取消"/>
+				</div>
 			</div>
-			<ul>
-				{% for item in data.topNews%}
-					<li><div class="btn" attr-href="{{item.href}}">{{item.title | truncate(15) }}</div></li>
-				{% endfor %}
-			</ul>
+			<ul class="newLists"></ul><!-- 由JS控制 -->
+			<div class="newsMore">更多>></div>
 		</div>
+		
 	</div>
 	<div class="view_rightNav">
 		

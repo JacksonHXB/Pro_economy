@@ -5,7 +5,7 @@ from flask import jsonify, request, render_template,flash
 from . import viewManager
 import json
 from economy.xiaoBing.voice import Speech
-from economy.service.front.hotNews import Service
+
 
 
 speech = Speech()
@@ -19,18 +19,9 @@ def speak(str):
 def index():
 #     xiaoBing = speech.syntheticSpeech("主人，你终于来到经济系统了！这里有有关经济的一切，您有什么需要尽管跟我说。") 
 
-    # 获取最近的热点新闻
-    topNews = Service.queryHotNews()
+
     data = {}
-    data["topNews"] = topNews
     return render_template("front/index.html",data=data)
-
-
-
-
-
-
-
 
 
 # 语音小冰
