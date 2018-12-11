@@ -1,21 +1,34 @@
 $(function(){	
 	
-console.log("已经执行了！")
+console.log("执行了index.js")
+
+/*给右下角设置时间*/
+$.setTime = function(){
+	setInterval(function(){
+		var time = dateFtt("yyyy-MM-dd hh:mm:ss", new Date())
+		$(".currentTime").text(time)
+	},1000)
+}
+
 
 /*显示左侧菜单栏*/
-$(".view_main").mousemove(function(e){
-	if(e.clientX<10){//当鼠标在距屏幕左50px内
-		console.log(e)
-		$(".view_leftNav").css({"display":"block"})
-		$(".view_content").css({"width":"92%"})
-	}
-})
+//$(".view_main").mousemove(function(e){
+//	console.log(e)
+//	if(e.clientX<10){//当鼠标在距屏幕左50px内
+//		$(".view_leftNav").css({"display":"block"})
+//		$(".view_content").css({"width":"92%"})
+//	}
+//})
+/*隐藏左侧菜单栏*/
+//$(".view_leftNav").mouseout(function(){
+//	$(".view_leftNav").css({"display":"none"})
+//})
 
-/*隐藏左侧菜单栏
-$(".view_leftNav").mouseout(function(){
-	$(".view_leftNav").css({"display":"none"})
-})
- * */
+
+
+
+
+
 
 /*点击宏观经济数据按钮*/
 $("#macroData").click(function(){
@@ -53,7 +66,7 @@ $(".closeIcon").click(function(){
 
 
 $.getTopNews = function(){
-	setTimeout(function(){
+	var newsTimer = setTimeout(function(){
 		new Promise(function(mySuccess,myFail){
 			$.ajax({
 				type: 'GET',
@@ -72,6 +85,10 @@ $.getTopNews = function(){
 			}
 		})
 	},3000)
+	setTimeout(function(){ //9s之后关闭新闻弹窗 
+		$(".newsTip").fadeOut("normal")
+	},9000)
+	
 }
 
 
@@ -81,7 +98,7 @@ $.getLatestNew = function(){
 	
 	
 	setInterval(function(){//每1分钟向客户端发送请求
-		console.log("测试")
+		console.log("获取最新新闻")
 //		new Promise(function(mySuccess,myFail){
 //			$.ajax({
 //				type: 'POST',
@@ -101,10 +118,31 @@ $.getLatestNew = function(){
 	},1000*60)
 }
 
+
+$.setTime()					//设置时间
 $.getTopNews()				//获取新闻列表
-$.getLatestNew()			//执行获取最新函数
+$.getLatestNew()			//执行获取最新新闻
 
 })
+
+/*时间格式处理*/
+function dateFtt(fmt,date)   { //author: meizz   
+	var o = {   
+		"M+" : date.getMonth()+1,                 //月份   
+		"d+" : date.getDate(),                    //日   
+		"h+" : date.getHours(),                   //小时   
+		"m+" : date.getMinutes(),                 //分   
+		"s+" : date.getSeconds(),                 //秒   
+		"q+" : Math.floor((date.getMonth()+3)/3), //季度   
+		"S"  : date.getMilliseconds()             //毫秒   
+	};   
+	if(/(y+)/.test(fmt))   
+		fmt=fmt.replace(RegExp.$1, (date.getFullYear()+"").substr(4 - RegExp.$1.length));   
+	for(var k in o)   
+		if(new RegExp("("+ k +")").test(fmt))   
+	fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+	return fmt;   
+}
 
 
 
