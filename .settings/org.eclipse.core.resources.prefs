@@ -5,6 +5,7 @@ encoding//economy/templates/back/index.html=UTF-8
 encoding//economy/templates/back/info/hotNews.html=UTF-8
 encoding//economy/templates/back/info/info.html=UTF-8
 encoding//economy/templates/back/login.html=UTF-8
+encoding//economy/templates/back/setting/addSetting.html=UTF-8
 encoding//economy/templates/front/index.html=UTF-8
 encoding//economy/templates/front/macroData/gdp.html=UTF-8
 encoding//economy/templates/front/macroData/macroData.html=UTF-8

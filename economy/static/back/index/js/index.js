@@ -33,6 +33,17 @@ $(function () {
 	    $(".hotNews").click(function () {
 	        $("#iframe").attr({"src":"http://localhost:8001/back/info/hotNews"})
 	    })
+    
+	/*点击知识库*/
+	$("#knowlege").click(function(){
+		$("#iframe").attr({"src":"http://localhost:8000"})  //链接java的知识库
+	})
+    
+	/*点击设置*/
+	$("#setting").click(function(){
+		console.log("点击了设置")
+		$("#iframe").attr({"src":"http://localhost:8001/back/setting/addSetting"})
+	})
 });
 
 

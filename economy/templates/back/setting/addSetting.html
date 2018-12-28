@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>添加主菜单</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='back/info/hotNews/css/hotNews.css')}}"/>
+<script type="text/javascript" src="{{url_for('static', filename='sys/js/jquery-2.0.0.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='back/info/hotNews/js/hotNews.js')}}"></script>
+</head>
+<body>
+	<button>添加主菜单</button>
+	<form action="/setting/addSetting" method="POST">
+		<input type="text" placeholder="请输入主菜单名称"/>
+		<input type="text" placeholder="制定图标的地址" />
+		<input type="text" placeholder="请输入主菜单跳转的地址" />
+	</form>
+</body>
+</html>
