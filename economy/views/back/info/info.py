@@ -35,7 +35,7 @@ def querySinaHotNews(keyword):
     db = economy.mongodb.db
     
     arr = []
-    if keyword == "sina":
+    if keyword == "sina": # 当关键字为新浪时搜索新浪热点资讯
         hotNews = db.tb_news_sina.find({"title":"hotNews_sina"})
         for hotNew in hotNews:
             item = {}
@@ -44,7 +44,7 @@ def querySinaHotNews(keyword):
             item["time"] = data["time"]
             item["href"] = data["href"]
             item["type"] = hotNew["data"]["title"]
-            arr.append(item)      
+            arr.append(item)    
     return json_util.dumps(arr)
 
 

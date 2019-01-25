@@ -24,11 +24,10 @@ $.setTime = function(){
 //	$(".view_leftNav").css({"display":"none"})
 //})
 
-
-
-
-
-
+/*点击主页工作台*/
+$("#index").click(function(){
+	$("#iframe").attr({"src":"http://localhost:8001/index"})
+})	
 
 /*点击宏观经济数据按钮*/
 $("#macroData").click(function(){
@@ -51,6 +50,12 @@ $("#macroData").click(function(){
     })
 })	
 
+/*点击热点资讯新闻*/
+$("#info").click(function(){
+	$("#iframe").attr({"src":"http://localhost:8001/info"})
+})	
+
+
 
 /*点击新闻*/
 $('body').on('click', '.btn', function(){  //使用最新的on函数绑定，body是第一次加载就存在的元素
@@ -64,6 +69,11 @@ $(".closeIcon").click(function(){
 	$(".newsTip").fadeOut("normal")
 })
 
+/*点击更多新闻按钮*/
+$(".newsMore").click(function(){
+	//直接跳转到热点资讯页面
+	$('#iframe').attr({"src":"http://localhost:8001/info"})
+})
 
 $.getTopNews = function(){
 	var newsTimer = setTimeout(function(){

@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block outRefer %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='front/info/info_index/css/info_index.css')}}"/>
+<script type="text/javascript" src="{{url_for('static', filename='front/info/info_index/js/info_index.js')}}"></script>
+{% endblock %}
+
+{% block view_main %}
+<div class="top">
+	<button>社会热点</button>
+	<button>财经热点</button>
+</div>
+<div class="content">
+	<table>
+		<tr>
+			<th>序号</th>
+			<th>标题</th>
+			<th>时间</th>
+			<th>来源</th>
+			<th>备注</th>
+		</tr>
+		{% for item in data.topNews %}
+			<tr>
+				<td width="300"><a href="{{item.href}}">{{item.title}}</a></td>
+				<td>{{item.time}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

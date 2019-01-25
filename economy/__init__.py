@@ -22,7 +22,7 @@ def initSystem():
     sys.register_blueprint(viewManager) 
     
     # 注册MongoDB
-    sys.config["MONGO_URI"] = 'mongodb://192.168.1.120:27017/db_finance'
+    sys.config["MONGO_URI"] = 'mongodb://192.168.0.180:27017/db_finance'
     
     mongodb.init_app(sys)
     
